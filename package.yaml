@@ -27,7 +27,7 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - scotty
-    - text
+    - aeson
 
 tests:
   stack-practice-test:

@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 import Web.Scotty (scotty, get, json, liftAndCatchIO)
-import Data.Text (Text)
+import Data.Aeson (object, (.=))
 
 main :: IO ()
 main = do
@@ -9,5 +9,6 @@ main = do
         get "/" $ do
             -- Logging
             liftAndCatchIO $ do
-                putStrLn "Hi!"
-            json ("Hello, world!" :: Text)
+                putStrLn "GET /"
+            let resp = object [ "count" .= (0 :: Int) ]
+            json resp
