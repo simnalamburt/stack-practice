@@ -28,6 +28,7 @@ executables:
     dependencies:
     - scotty
     - aeson
+    - stm
 
 tests:
   stack-practice-test:
