@@ -1,2 +1,5 @@
 Stack Practice
 ========
+```
+stack run
+```
