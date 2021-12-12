@@ -17,9 +17,6 @@ description: Please see the README on GitHub at <https://github.com/simnalamburt
 dependencies:
 - base >= 4.7 && < 5
 
-library:
-  source-dirs: src
-
 executables:
   stack-practice-exe:
     main: Main.hs
@@ -28,8 +25,6 @@ executables:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
-    dependencies:
-    - stack-practice
 
 tests:
   stack-practice-test:
@@ -39,5 +34,3 @@ tests:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
-    dependencies:
-    - stack-practice
