@@ -1,4 +1,5 @@
 {-# LANGUAGE OverloadedStrings #-}
+import Text.Printf (printf)
 import Web.Scotty (scotty, get, json, liftAndCatchIO)
 import Data.Aeson (object, (.=))
 import Control.Concurrent.STM.TVar (newTVarIO, readTVar, modifyTVar)
@@ -12,9 +13,10 @@ main = do
         get "/" $ do
             -- Logging
             count <- liftAndCatchIO $ do
-                putStrLn "GET /"
-                atomically $ do
+                count <- atomically $ do
                     modifyTVar counter (+1)
                     readTVar counter
+                printf "Request #%d\n" count
+                return count
             let resp = object [ "count" .= count ]
             json resp
