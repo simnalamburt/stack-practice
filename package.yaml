@@ -25,6 +25,9 @@ executables:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
+    dependencies:
+    - scotty
+    - text
 
 tests:
   stack-practice-test:
