@@ -1,10 +1,10 @@
 name: stack-practice
-version: 0.1.0.0
+version: 0.1.0
 github: simnalamburt/stack-practice
-license: BSD3
+license: (Apache-2.0 OR MIT)
 author: Hyeon Kim
 maintainer: simnalamburt@gmail.com
-copyright: 2021 Hyeon Kim
+copyright: 2015-2021 Hyeon Kim
 
 extra-source-files:
 - README.md
